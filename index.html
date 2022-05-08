@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>My Friends</h1>
+    <input type="text" id="myInput" placeholder="Search name here..." onkeyup="searchFun()">
+
+    <table id="myTable">
+
+        <tr class="header">
+            <th style="width:40%;">Name</th>
+            <th style="width:30%;">Degree</th>
+            <th style="width:30%;">Profession</th>
+        </tr>
+
+
+        <tr>
+            <td>Vinod</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td>Abhi</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td>Immanuel</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td>pari</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td>Ash</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td>xyz</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td>Vinod</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td>Vinod</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td>Vinod</td>
+            <td>MCS</td>
+            <td>Full Stack Developer</td>
+        </tr>
+    </table>
+
+
+    <script>
+        const searchFun = () =>
+        {
+            let filter = document.getElementById('myInput').value.toUpperCase();
+            let myTable = document.getElementById('myTable');
+            let tr = myTable.getElementsByTagName('tr');
+            
+            for(var i = 0 ; i < tr.length; i++)
+            {
+                let td = tr[i].getElementsByTagName('td')[0];
+
+                if(td)
+                {
+                    let text_value = td.textContent || td.innerHTML;
+
+                    if(text_value.toUpperCase().indexOf(filter) > -1)
+                    {
+                        tr[i].style.display = "";
+                    }
+
+                    else
+                    {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

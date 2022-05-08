@@ -1,0 +1,21 @@
+h1
+{
+    color: red;
+    text-align: center;
+
+}
+
+input
+{
+    width: 99%;
+    height: 25px;
+}
+
+.header
+{
+    margin-top: 5px;
+    line-height: 50px;
+    word-spacing: 3000px;
+}
+
+
